@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class FindDuplicate {
 
 	public static void main(String[] args) {
 		
 		String str = "phillipinesip";
-		Map<Character, Integer> dupMap = new HashMap<>(); 
+		ConcurrentHashMap<Character, Integer> dupMap = new ConcurrentHashMap<>(); 
 		
 		for (int i =0;i < str.length(); i ++){
 			if (dupMap.containsKey(str.charAt(i)))
